@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hannah Olivarez</title>
+        <link rel="stylesheet" type="text/css" href="./portfolio_css.css">
+        <script src="portfolio.js" defer></script>
+    </head>
+    <body class="background">
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+        </div>
+        <br>
+        <br>
+        <div id="home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./images/wavesagain.mp4" type="video/mp4">
+                Sorry, your browser does not support HTML5 video!
+            </video>
+        </div>
+        <div class="video_text">
+            <h1 style="color: rgb(240,144,224)">Hannah's Portfolio</h1>
+            <p>
+                <strong>
+                    <center>
+                        <q>Work hard,
+                        <br>Be kind,
+                        <br>And amazing things will happen.
+                        </q>
+                        <br>-Conan O'Brien<br>
+                        <br>
+                        Welcome to my technical portfolio.
+                    </center>
+                </strong>
+            </p>
+        </div>
+        <div class="row" id="about">
+            <div class="column2">
+                <img src="./images/pic_of_me.jpg" alt="Photo of self">
+            </div>
+            <div class="column1">
+                <h1>About Me</h1>
+                    <p>I have a two year old daughter and more dogs than any person should probably have.<br><br>
+                    I am a student at <a href="https://learncodinganywhere.com" target="_blank">The Tech Academy</a> and I am training in the UI/UX Designer program.<br><br>
+                    I am studying UI/UX Design and have some experience in HTML5, CSS3, and Javascript. Contact me <a href="#contact">here!</a></p>
+            </div>
+        </div>
+
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1/4</div>
+                        <img class="Slide_Show_Images" src="images/me.png" style="width:100%">
+                        <div class="text">I am always available to assist you on your project!</div> 
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2/4</div>
+                        <img class="Slide_Show_Images" src="images/logos.PNG" style="width:100%">
+                        <div class="text">I am a UI/UX Student, currently studying: <br> HTML, CSS, Javascript,</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3/4</div>
+                        <img class="Slide_Show_Images" src="images/sqlLogo.png" style="width:100%">
+                        <div class="text">Databases and SQL,</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4/4</div>
+                        <img class="Slide_Show_Images" src="images/uiux.png" style="width:100%">
+                        <div class="text">and User Interface/User Experience Design.</div>
+                    </div>
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+            </div>
+        <br>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <div class="row" id="github">
+            <div class="column1">
+                <h1>GitHub</h1>
+                <p>Check out my GitHub portfolio here:<br>
+                <center><a href="https://mygithubpage" target="_blank">GitHub</a></center></p>
+            </div>
+            <div class="column2">
+                <a href="https://mygithubpage" target="_blank"><img src="./images/github_snap.PNG" alt="GitHub Page"></a>
+            </div>
+        </div>
+
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">Contact Me</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/hannah951753@gmail.com" method="POST" class="form-container">
+                    <h1>Contact Me</h1>
+                        <label for="name"><b>Name:</b></label>
+                        <input type="text" placeholder="Please enter your name here" name="name"required>
+                        <label for="phone"><b>Phone Number:</b></label>
+                        <input type="text" placeholder="Please enter your phone number" name="phone"required>
+                        <label for="email"><b>Email:</b></label>
+                        <input type="text" placeholder="Please enter your email" name="email"required>
+                        <label for="message"><b>Message:</b></label>
+                        <input type="text" placeholder="Enter your message here" name="message"required>
+                <button type="submit" class="btn">Send it in!</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+        <footer>
+            <p>
+                <center>&copy; Prosper Consulting Inc. <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+            </p>
+        </footer>
+    </body>
+</html>
